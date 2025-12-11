@@ -19,7 +19,7 @@ export function Login() {
     const [success, setSuccess] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const BASE_URL = import.meta.env.VITE_API_BASE_URL
+    const BASE_URL = "solar-system-backend-production.up.railway.app"
 
     useEffect(() => {
       if (!loading && user) {
