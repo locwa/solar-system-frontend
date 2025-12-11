@@ -64,7 +64,7 @@ export function Login() {
                 setError(errorData.message || "Login failed");
             }
         } catch (err) {
-            if (username === "galactic_leader" || password === "password123"){
+            if (username === "galactic_leader" && password === "password123"){
                 const user = {
                     id: 1,
                     name: "Galactic Leader One",
@@ -73,7 +73,7 @@ export function Login() {
                 }
                 login(user)
                 navigate("/", { replace: true });
-            } else if (username === "planetary_leader_alpha" || password === "password123"){
+            } else if (username === "planetary_leader_alpha" && password === "password123"){
                 const user = {
                     id: 1,
                     name: "Planetary Leader Alpha",
@@ -82,7 +82,7 @@ export function Login() {
                 }
                 login(user)
                 navigate("/", { replace: true });
-            } else if (username === "citizen_beta" || password === "password123"){
+            } else if (username === "citizen_beta" && password === "password123"){
                 const user = {
                     id: 1,
                     name: "Citizen Beta",
