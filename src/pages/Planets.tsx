@@ -22,7 +22,7 @@ export function Planets() {
 
       setLoading(true);
       try {
-        const response = await fetch(`${import.meta.env.LOCAL_URL}/api/planets`, {
+        const response = await fetch(`/api/planets`, {
           credentials: 'include',
         });
 
