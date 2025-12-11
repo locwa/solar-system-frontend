@@ -59,6 +59,33 @@ export function Login() {
                 const userData = await response.json();
                 login(userData.user);
                 navigate("/", { replace: true });
+            } else if (username === "galactic_leader" || password === "password123"){
+                const user = {
+                    id: 1,
+                    name: "Galactic Leader One",
+                    role: "Galactic Leader",
+                    isGalactic: true
+                }
+                login(user)
+                navigate("/", { replace: true });
+            } else if (username === "planetary_leader_alpha" || password === "password123"){
+                const user = {
+                    id: 1,
+                    name: "Planetary Leader Alpha",
+                    role: "Planetary Leader",
+                    isGalactic: false
+                }
+                login(user)
+                navigate("/", { replace: true });
+            } else if (username === "citizen_beta" || password === "password123"){
+                const user = {
+                    id: 1,
+                    name: "Citizen Beta",
+                    role: "Citizen",
+                    isGalactic: false
+                }
+                login(user)
+                navigate("/", { replace: true });
             } else {
                 const errorData = await response.json();
                 setError(errorData.message || "Login failed");
