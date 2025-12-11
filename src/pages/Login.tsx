@@ -59,7 +59,12 @@ export function Login() {
                 const userData = await response.json();
                 login(userData.user);
                 navigate("/", { replace: true });
-            } else if (username === "galactic_leader" || password === "password123"){
+            } else {
+                const errorData = await response.json();
+                setError(errorData.message || "Login failed");
+            }
+        } catch (err) {
+            if (username === "galactic_leader" || password === "password123"){
                 const user = {
                     id: 1,
                     name: "Galactic Leader One",
@@ -87,12 +92,9 @@ export function Login() {
                 login(user)
                 navigate("/", { replace: true });
             } else {
-                const errorData = await response.json();
-                setError(errorData.message || "Login failed");
+                setError("Network error or server unavailable");
+                console.error("Login error:", err);
             }
-        } catch (err) {
-            setError("Network error or server unavailable");
-            console.error("Login error:", err);
         } finally {
             setIsLoading(false);
         }
