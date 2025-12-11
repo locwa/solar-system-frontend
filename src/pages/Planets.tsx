@@ -16,13 +16,15 @@ export function Planets() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  const BASE_URL = "solar-system-backend-production.up.railway.app"
+
   useEffect(() => {
     const fetchPlanets = async () => {
       if (!user) return; // Should be caught by PrivateRoute, but good practice
 
       setLoading(true);
       try {
-        const response = await fetch(`/api/planets`, {
+        const response = await fetch(`${BASE_URL}/api/planets`, {
           credentials: 'include',
         });
 
