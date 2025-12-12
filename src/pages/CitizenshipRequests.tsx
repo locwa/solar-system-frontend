@@ -45,8 +45,8 @@ export function CitizenshipRequests() {
     setLoading(true);
     try {
       const [citizenRes, planetsRes] = await Promise.all([
-        fetch(`https://solar-system-backend-production.up.railway.app/api/citizen/me`, { credentials: "include" }),
-        fetch(`https://solar-system-backend-production.up.railway.app/api/citizen/planets`, { credentials: "include" }),
+        fetch(`/api/citizen/me`, { credentials: "include" }),
+        fetch(`/api/citizen/planets`, { credentials: "include" }),
       ]);
 
       if (citizenRes.ok) {
@@ -54,7 +54,7 @@ export function CitizenshipRequests() {
         setCitizen(citizenData);
 
         const requestsRes = await fetch(
-          `https://solar-system-backend-production.up.railway.app/api/citizens/${citizenData.CitizenID}/citizenship-request`,
+          `/api/citizens/${citizenData.CitizenID}/citizenship-request`,
           { credentials: "include" }
         );
         if (requestsRes.ok) {
@@ -83,7 +83,7 @@ export function CitizenshipRequests() {
     setSubmitting(true);
     try {
       const response = await fetch(
-        `https://solar-system-backend-production.up.railway.app/api/citizens/${citizen.CitizenID}/citizenship-request`,
+        `/api/citizens/${citizen.CitizenID}/citizenship-request`,
         {
           method: "POST",
           headers: {

@@ -49,7 +49,7 @@ export function Proposals() {
 
     setLoading(true);
     try {
-      const response = await fetch(`https://github.com/locwa/solar-system-frontend.git/api/proposals`, {
+      const response = await fetch(`/api/proposals`, {
         credentials: "include",
       });
 
@@ -71,7 +71,7 @@ export function Proposals() {
   const handleDecision = async (proposalId: number, decision: "Approved" | "Rejected") => {
     setDecidingId(proposalId);
     try {
-      const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/proposals/${proposalId}/decide`, {
+      const response = await fetch(`/api/proposals/${proposalId}/decide`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -27,7 +27,7 @@ export function ModificationRequestDetails() {
 
       setLoading(true);
       try {
-        const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/planets/${planetId}/modification-requests/${requestId}`, {
+        const response = await fetch(`/api/planets/${planetId}/modification-requests/${requestId}`, {
           credentials: 'include',
         });
 

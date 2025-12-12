@@ -23,7 +23,7 @@ export function ManagedPlanetDetails() {
 
       setLoading(true);
       try {
-        const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/planets/${planetId}/details`, {
+        const response = await fetch(`/api/planets/${planetId}/details`, {
           credentials: 'include',
         });
 
