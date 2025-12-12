@@ -23,7 +23,7 @@ export function SubmitModificationRequest() {
     setSuccess(null);
 
     try {
-      const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/planets/${planetId}/modification-requests`, {
+      const response = await fetch(`/api/planets/${planetId}/modification-requests`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

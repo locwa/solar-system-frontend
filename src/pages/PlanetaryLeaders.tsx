@@ -29,7 +29,7 @@ export function PlanetaryLeaders() {
 
       setLoading(true);
       try {
-        const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/planetary-leaders`, {
+        const response = await fetch(`/api/planetary-leaders`, {
           credentials: 'include',
         });
 

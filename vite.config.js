@@ -13,7 +13,7 @@ export default defineConfig({
     allowedHosts: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://solar-system-backend-production.up.railway.app/',
         changeOrigin: true,
       }
     }

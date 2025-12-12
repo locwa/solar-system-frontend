@@ -27,7 +27,7 @@ export function CitizensOnPlanet() {
 
       setLoading(true);
       try {
-        const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/planets/${planetId}/citizens`, {
+        const response = await fetch(`/api/planets/${planetId}/citizens`, {
           credentials: 'include',
         });
 

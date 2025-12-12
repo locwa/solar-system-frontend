@@ -46,7 +46,7 @@ export function Vote() {
 
     setLoading(true);
     try {
-      const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/citizen/proposals`, {
+      const response = await fetch(`/api/citizen/proposals`, {
         credentials: "include",
       });
 
@@ -69,7 +69,7 @@ export function Vote() {
     setVotingId(proposalId);
     try {
       const response = await fetch(
-        `https://solar-system-backend-production.up.railway.app/api/planets/${planetId}/modification-requests/${proposalId}/vote`,
+        `/api/planets/${planetId}/modification-requests/${proposalId}/vote`,
         {
           method: "POST",
           headers: {
