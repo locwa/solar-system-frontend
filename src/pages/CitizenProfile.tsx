@@ -31,7 +31,7 @@ export function CitizenProfile() {
 
       setLoading(true);
       try {
-        const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/citizens/${citizenId}/profile`, {
+        const response = await fetch(`    https://solar-system-backend-production.up.railway.app/api/citizens/${citizenId}/profile`, {
           credentials: 'include',
         });
 
