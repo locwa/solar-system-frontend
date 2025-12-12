@@ -24,7 +24,7 @@ export function Planets() {
 
       setLoading(true);
       try {
-        const response = await fetch(`${BASE_URL}/api/planets`, {
+        const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/planets`, {
           credentials: 'include',
         });
 

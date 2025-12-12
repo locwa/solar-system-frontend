@@ -27,7 +27,7 @@ export function AssignLeader() {
         // Assuming an API endpoint to get all users or users eligible to be leaders
         // For simplicity, let's assume we fetch all users and filter them.
         // In a real app, you might have a dedicated endpoint for potential leaders.
-        const response = await fetch('/api/users'); // Assuming this route exists or we create it
+        const response = await fetch('https://solar-system-backend-production.up.railway.app/api/users'); // Assuming this route exists or we create it
         if (response.ok) {
           const data: User[] = await response.json();
           setUsers(data.filter(u => u.Role !== 'Galactic Leader')); // Cannot assign GL as PL
@@ -62,7 +62,7 @@ export function AssignLeader() {
     }
 
     try {
-      const response = await fetch(`/api/planets/${planetId}/leader`, {
+      const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/planets/${planetId}/leader`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
