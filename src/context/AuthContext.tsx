@@ -51,7 +51,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async () => {
     try {
-      const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/auth/me/api/auth/logout`, { method: 'POST', credentials: 'include' });
+      const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/auth/logout`, { method: 'POST', credentials: 'include' });
       if (response.ok) {
         setUser(null);
       } else {
