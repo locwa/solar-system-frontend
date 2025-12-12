@@ -25,7 +25,7 @@ export function CreateCitizen() {
 
       setLoading(true);
       try {
-        const usersResponse = await fetch(`/api/auth/users`, { credentials: 'include' });
+        const usersResponse = await fetch(`https://solar-system-backend-production.up.railway.app/api/auth/users`, { credentials: 'include' });
         const usersData: User[] = usersResponse.ok ? await usersResponse.json() : [];
 
         setUsers(usersData.filter(u => u.Role !== 'Galactic Leader' && u.Role !== 'Planetary Leader'));
