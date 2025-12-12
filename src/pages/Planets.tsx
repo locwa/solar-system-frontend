@@ -24,8 +24,8 @@ export function Planets() {
 
       setLoading(true);
       try {
-        const response = await fetch(`/api/planets`, {
-          credentials: 'include',
+        const response = await fetch(`${BASE_URL}/api/planets`, {
+          credentials: "include",
         });
 
         if (response.ok) {
