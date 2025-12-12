@@ -49,7 +49,7 @@ export function Proposals() {
 
     setLoading(true);
     try {
-      const response = await fetch(`/api/proposals`, {
+      const response = await fetch(`https://github.com/locwa/solar-system-frontend.git/api/proposals`, {
         credentials: "include",
       });
 
