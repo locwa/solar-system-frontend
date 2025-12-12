@@ -16,7 +16,7 @@ export function Planets() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  const BASE_URL = "solar-system-backend-production.up.railway.app"
+  const BASE_URL = "https://solar-system-backend-production.up.railway.app"
 
   useEffect(() => {
     const fetchPlanets = async () => {

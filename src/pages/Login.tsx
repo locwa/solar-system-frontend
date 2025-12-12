@@ -46,7 +46,7 @@ export function Login() {
         setError("");
 
         try {
-            const response = await fetch(`/api/auth/login`, {
+            const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export function Login() {
         }
 
         try {
-            const response = await fetch(`${BASE_URL}/api/auth/register`, {
+            const response = await fetch(`https://solar-system-backend-production.up.railway.app/api/auth/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
