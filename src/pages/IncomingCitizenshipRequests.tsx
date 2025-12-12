@@ -47,7 +47,7 @@ export function IncomingCitizenshipRequests() {
 
     setLoading(true);
     try {
-      const response = await fetch(`api/planets/${planetId}/citizenship-requests`, {
+      const response = await fetch(`/api/planets/${planetId}/citizenship-requests`, {
         credentials: "include",
       });
 
@@ -70,7 +70,7 @@ export function IncomingCitizenshipRequests() {
     setDecidingId(requestId);
     try {
       const response = await fetch(
-        `api/planets/${planetId}/citizenship-requests/${requestId}/decide`,
+        `/api/planets/${planetId}/citizenship-requests/${requestId}/decide`,
         {
           method: "POST",
           headers: {

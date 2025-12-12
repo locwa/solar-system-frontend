@@ -25,7 +25,7 @@ export function CreatePlanet() {
     setSuccess(null);
 
     try {
-      const response = await fetch('api/planets', {
+      const response = await fetch('/api/planets', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
