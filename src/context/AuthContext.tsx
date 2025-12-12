@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     fetchUser();
   }, []);
-//g
+
   const login = (userData: User) => {
     setUser(userData);
   };
