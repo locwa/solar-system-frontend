@@ -9,11 +9,11 @@ export default defineConfig({
   ],
   server: {
     host: '0.0.0.0',
-    port: 8080,
+    port: 5000,
     allowedHosts: true,
     proxy: {
       '/api': {
-        target: 'https://solar-system-backend-production.up.railway.app',
+        target: 'https://solar-system-backend-production.up.railway.app/',
         changeOrigin: true,
       }
     }
